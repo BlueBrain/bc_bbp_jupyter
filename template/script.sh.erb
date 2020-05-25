@@ -13,8 +13,13 @@ cd "${HOME}"
 # Benchmark info
 echo "TIMING - Starting jupyter at: $(date)"
 
+# enable jupyterlab
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/jupyterlab/bin/activate
 
+# enable nodejs10 (lab needs it for extenstions)
+. /gpfs/bbp.cscs.ch/ssd/apps/rhscl/rh-nodejs10/enable
+
+#
 # Launch the Jupyter Notebook Server
 set -x
 jupyter <%= context.jupyterlab_switch == "1" ? "lab" : "notebook" %> --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>
