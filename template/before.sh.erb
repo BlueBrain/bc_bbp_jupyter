@@ -62,8 +62,9 @@ c.NotebookApp.notebook_dir = '${HOME}'
 c.NotebookApp.disable_check_xsrf = True
 c.NotebookApp.nbserver_extensions = {"jupyterlmod": True}
 EOL
-
-cat > "${CONFIG_FILE}.load" << EOL
-python-dev/0.2/python3/serial py-jupyter-notebook/4.2.3/python3 <%= context.modules %>
+)
+(
+cat > "${HOME}/.local/share/jupyter/modules.load" << EOL
+unstable python-dev py-jupyter-notebook <%= context.modules %>
 EOL
 )
