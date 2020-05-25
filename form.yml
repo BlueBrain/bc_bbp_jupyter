@@ -11,6 +11,7 @@ form:
 attributes:
   jupyterlab_switch:
     widget: "check_box"
+    value: 1
     label: "Use JupyterLab instead of Jupyter Notebook?"
     help: |
       JupyterLab is the next generation of Jupyter, and is completely compatible with existing Jupyter Notebooks.
