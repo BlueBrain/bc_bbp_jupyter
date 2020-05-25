@@ -40,11 +40,12 @@ SALT="$(create_passwd 16)"
 password="$(create_passwd 16)"
 PASSWORD_SHA1="$(echo -n "${password}${SALT}" | openssl dgst -sha1 | awk '{print $NF}')"
 
-#token="$(create_passwd)"
-
 # The `$CONFIG_FILE` environment variable is exported as it is used in the main
 # `script.sh.erb` file when launching the Jupyter Notebook server.
 export CONFIG_FILE="${PWD}/config.py"
+
+# danielfr
+export LMOD_CMD="/usr/share/lmod/6.5.1/libexec/lmod"
 
 # Generate Jupyter configuration file with secure file permissions
 (
@@ -58,11 +59,8 @@ c.NotebookApp.base_url = '/node/${host}/${port}/'
 c.NotebookApp.open_browser = False
 c.NotebookApp.allow_origin = '*'
 c.NotebookApp.notebook_dir = '${HOME}'
-# c.NotebookApp.token = '${token}'
 c.NotebookApp.disable_check_xsrf = True
-c.GitLabConfig.allow_client_side_access_token = True
-c.GitLabConfig.url = 'https://bbpcb058.bbp.epfl.ch'
-c.GitLabConfig.validate_cert = False
+c.NotebookApp.nbserver_extensions = {"jupyterlmod": True}
 EOL
 
 cat > "${CONFIG_FILE}.load" << EOL
