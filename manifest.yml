@@ -4,7 +4,7 @@ category: Interactive Apps
 subcategory: Servers
 role: batch_connect
 description: |
-  This app will launch a [Jupyter] server using [Python] on the BB5 TDS cluster.
+  Launch a [Jupyter] notebook/lab server using [Python] on the BB5 cluster.
 
   [Jupyter]: https://jupyter.org/
   [Python]: https://www.python.org/
