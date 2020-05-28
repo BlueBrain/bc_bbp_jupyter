@@ -3,7 +3,6 @@ cluster: "bb5cluster"
 form:
   - bc_account
   - bc_num_hours
-  - bc_num_slots
   - bc_queue
   - extra_jupyter_args
   - modules
