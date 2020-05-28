@@ -11,7 +11,7 @@ form:
 attributes:
   bc_account:
     label: "Account"
-    help: "Charge account for the batch work. i.e: proj#"
+    help: "Charge account for the batch work. Ex: proj#"
     pattern: "proj[0-9]*"
     required: true
   num_cores:
@@ -23,7 +23,7 @@ attributes:
     step: 1
   modules:
     label: "Modules to load"
-    help: "Whitespaced separated list. i.e: python/3.7.4 py-numpy/1.17.3"
+    help: "Whitespace separated list. Ex: python/3.7.4 py-numpy/1.17.3"
   jupyterlab_switch:
     widget: "check_box"
     value: 1
