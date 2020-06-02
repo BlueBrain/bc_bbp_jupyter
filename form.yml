@@ -3,7 +3,7 @@ cluster: "bb5cluster"
 form:
   - bc_account
   - bc_num_hours
-  - bc_queue
+  - bbp_partition
   - extra_jupyter_args
   - modules
   - jupyterlab_switch
@@ -13,6 +13,12 @@ attributes:
     help: "Charge account for the batch work. Ex: proj#"
     pattern: "proj[0-9]*"
     required: true
+  bbp_partition:
+    widget: select
+    label: "Partiton"
+    options:
+      - [ "prod", "prod" ]
+      - [ "prod_small", "prod_small" ]
   num_cores:
     widget: "number_field"
     label: "Number of cores"
