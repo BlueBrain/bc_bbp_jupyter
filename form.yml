@@ -28,7 +28,8 @@ attributes:
     step: 1
   modules:
     label: "Modules to load"
-    help: "Whitespace separated list. Ex: python/3.7.4 py-numpy/1.17.3"
+    help: |
+       Whitespace separated list. Ex: python/3.7.4 py-numpy/1.17.3
   jupyterlab_switch:
     widget: "check_box"
     value: 1

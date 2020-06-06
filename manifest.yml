@@ -4,7 +4,7 @@ category: Interactive Apps
 subcategory: Servers
 role: batch_connect
 description: |
-  Launch a [Jupyter] notebook/lab server using [Python] on the BB5 cluster.
+  Launch a [Jupyter] notebook/lab server on the BB5 cluster. [Service docs]
 
   [Jupyter]: https://jupyter.org/
-  [Python]: https://www.python.org/
+  [Service docs]: https://bbpteam.epfl.ch/project/spaces/display/SDKB/JupyterHub+on+BB5
