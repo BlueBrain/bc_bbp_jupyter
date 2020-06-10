@@ -2,9 +2,11 @@
 cluster: "bb5cluster"
 form:
   - bc_account
-  - bc_num_hours
+  - bbp_num_nodes
+  - bbp_num_cores
+  - bbp_constraint
   - bbp_partition
-  - extra_jupyter_args
+  - bc_num_hours
   - modules
   - jupyterlab_switch
 attributes:
@@ -13,21 +15,40 @@ attributes:
     help: "Charge account for the batch work. Ex: proj#"
     pattern: "proj[0-9]*"
     required: true
+  bbp_constraint:
+    widget: select
+    label: "Constraint the job to run on selected HW"
+    options:
+      - [ "cpu", "cpu" ]
+      - [ "knl", "knl" ]
+      - [ "nvme", "nvme" ]
+      - [ "v100", "v100" ]
+      - [ "volta", "volta" ]
+    help: "Select 'cpu' if you are not sure"
   bbp_partition:
     widget: select
     label: "Partiton"
     options:
       - [ "prod", "prod" ]
       - [ "prod_small", "prod_small" ]
-  num_cores:
+  bbp_num_nodes:
     widget: "number_field"
-    label: "Number of cores"
+    label: "Number of nodes"
     value: 1
     min: 1
-    max: 28
+    max: 32
     step: 1
+    required: true
+  bbp_num_cores:
+    widget: "number_field"
+    label: "Number of cores per node"
+    value: 1
+    min: 1
+    max: 32
+    step: 1
+    required: true
   modules:
-    label: "Modules to load"
+    label: "Modules to load (optional)"
     help: |
        Whitespace separated list. Ex: python/3.7.4 py-numpy/1.17.3
   jupyterlab_switch:

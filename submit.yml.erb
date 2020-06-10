@@ -33,3 +33,7 @@ batch_connect:
 script:
   #reservation_id: "environments_update"
   queue_name: "<%= bbp_partition %>"
+  native:
+    - "--constraint=<%= bbp_constraint %>"
+    - "--cpus-per-task=<%= bbp_num_cores %>"
+    - "--nodes=<%= bbp_num_nodes %>"
