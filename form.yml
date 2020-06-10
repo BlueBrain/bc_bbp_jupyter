@@ -34,4 +34,3 @@ attributes:
     widget: "check_box"
     value: 1
     label: "Use JupyterLab instead of Jupyter Notebook?"
-  extra_jupyter_args: ""
