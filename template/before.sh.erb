@@ -47,6 +47,10 @@ export CONFIG_FILE="${PWD}/config.py"
 # danielfr
 export LMOD_CMD="/usr/share/lmod/6.5.1/libexec/lmod"
 
+# Set JUPYTER_HOME to user's choice. Defaults to $HOME if empty
+JUPYTER_HOME="<%= context.bbp_jupyter_homedir %>"
+JUPYTER_HOME="${JUPYTER_HOME:-${HOME}}"
+
 # Generate Jupyter configuration file with secure file permissions
 (
 umask 077
@@ -58,7 +62,7 @@ c.NotebookApp.password = u'sha1:${SALT}:${PASSWORD_SHA1}'
 c.NotebookApp.base_url = '/node/${host}/${port}/'
 c.NotebookApp.open_browser = False
 c.NotebookApp.allow_origin = '*'
-c.NotebookApp.notebook_dir = '${HOME}'
+c.NotebookApp.notebook_dir = '${JUPYTER_HOME}'
 c.NotebookApp.disable_check_xsrf = True
 c.NotebookApp.nbserver_extensions = {"jupyterlmod": True}
 EOL

@@ -2,6 +2,7 @@
 cluster: "bb5cluster"
 form:
   - bc_account
+  - bbp_jupyter_homedir
   - bbp_num_nodes
   - bbp_num_cores
   - bbp_constraint
@@ -15,6 +16,15 @@ attributes:
     help: "Charge account for the batch work. Ex: proj#"
     pattern: "proj[0-9]*"
     required: true
+  bbp_jupyter_homedir:
+    label: " Jupyter root directory"
+    help: |
+      Leave it empty if you want to use your $HOME directory
+
+      **NOTE:** must start with /gpfs/bbp.cscs.ch/ and it should be a valid path
+
+    pattern: '\/gpfs\/bbp\.cscs\.ch((\/[\w._-]*)*)'
+    value: "/gpfs/bbp.cscs.ch/data/project/proj#"
   bbp_constraint:
     widget: select
     label: "Constraint the job to run on selected HW"
