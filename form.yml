@@ -5,6 +5,7 @@ form:
   - bbp_jupyter_homedir
   - bbp_num_nodes
   - bbp_num_cores
+  - bbp_mem_node
   - bbp_constraint
   - bbp_partition
   - bc_num_hours
@@ -41,6 +42,14 @@ attributes:
     options:
       - [ "prod", "prod" ]
       - [ "prod_small", "prod_small" ]
+  bbp_mem_node:
+    widget: "number_field"
+    label: "Specify the amount of memory per node (megabytes)"
+    value: 4096
+    min: 1024
+    max: 1024000
+    step: 1024
+    required: true
   bbp_num_nodes:
     widget: "number_field"
     label: "Number of nodes"
