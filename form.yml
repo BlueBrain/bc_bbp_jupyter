@@ -3,6 +3,7 @@ cluster: "bb5cluster"
 form:
   - bc_account
   - bbp_jupyter_homedir
+  - bbp_environment
   - bbp_num_nodes
   - bbp_num_cores
   - bbp_mem_node
@@ -36,6 +37,13 @@ attributes:
       - [ "v100", "v100" ]
       - [ "volta", "volta" ]
     help: "Select 'cpu' if you are not sure"
+  bbp_environment:
+    widget: select
+    label: "Environment"
+    options:
+      - [ "Default python 3.7 environment", "default" ]
+      - [ "BBS-BBG environment", "bbs_bbg" ]
+    help: "Select 'Default python 3.7' if you are not sure"
   bbp_partition:
     widget: select
     label: "Partiton"
