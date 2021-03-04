@@ -69,6 +69,6 @@ EOL
 )
 (
 cat > "${HOME}/.local/share/jupyter/modules.load" << EOL
-unstable py-jupyter-notebook git <%= context.modules %>
+archive/2020-12 python/3.7.4 py-jupyter-notebook/4.2.3 git/2.18.0 <%= context.modules %>
 EOL
 )
