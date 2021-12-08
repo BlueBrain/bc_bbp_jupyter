@@ -18,6 +18,9 @@ echo "Activating '<%= context.bbp_environment %>' virtual environment..."
 if [[ <%= context.bbp_environment %> == "bbs_bbg" ]];
 then
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/bbs_bbg/bin/activate
+elif [[ <%= context.bbp_environment %> == "nexus_forge" ]];
+then
+. /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/nexus_forge/bin/activate
 else
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python37/bin/activate
 fi
