@@ -33,6 +33,7 @@ attributes:
     options:
       - [ "bigmem", "bigmem" ]
       - [ "cpu", "cpu" ]
+      - [ "gpu_32g", "gpu_32g" ]
       - [ "knl", "knl" ]
       - [ "nvme", "nvme" ]
       - [ "v100", "v100" ]
