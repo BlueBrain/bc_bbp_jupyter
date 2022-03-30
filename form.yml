@@ -56,7 +56,7 @@ attributes:
     widget: "number_field"
     label: "Specify the amount of memory per node (megabytes)"
     value: 4096
-    min: 1024
+    min: 0
     max: 1024000
     step: 1024
     required: true
