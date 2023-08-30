@@ -44,6 +44,7 @@ attributes:
     label: "Environment"
     options:
       - [ "Default python 3.7 environment", "default" ]
+      - [ "python 3.9 environment", "python39" ]
       - [ "BBS-BBG environment", "bbs_bbg" ]
       - [ "Nexus Forge environment", "nexus_forge" ]
     help: "Select 'Default python 3.7' if you are not sure"

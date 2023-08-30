@@ -21,12 +21,12 @@ then
 elif [[ <%= context.bbp_environment %> == "nexus_forge" ]];
 then
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/nexus_forge/bin/activate
+elif [[ <%= context.bbp_environment %> == "python39" ]];
+then
+. /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python39/bin/activate
 else
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python37/bin/activate
 fi
-
-# enable nodejs10 (lab needs it for extenstions)
-. /gpfs/bbp.cscs.ch/ssd/apps/rhscl/rh-nodejs10/enable
 
 #
 # Launch the Jupyter Notebook Server
