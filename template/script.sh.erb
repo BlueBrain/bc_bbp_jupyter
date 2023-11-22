@@ -24,6 +24,9 @@ then
 elif [[ <%= context.bbp_environment %> == "python39" ]];
 then
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python39/bin/activate
+elif [[ <%= context.bbp_environment %> == "python310" ]];
+then
+. /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python310/bin/activate
 else
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python37/bin/activate
 fi
