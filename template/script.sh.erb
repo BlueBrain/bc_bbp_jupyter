@@ -21,6 +21,9 @@ then
 elif [[ <%= context.bbp_environment %> == "nexus_forge" ]];
 then
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/nexus_forge/bin/activate
+elif [[ <%= context.bbp_environment %> == "nexus_forge_38" ]];
+then
+. /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/nexus_forge_38/bin/activate
 elif [[ <%= context.bbp_environment %> == "python39" ]];
 then
 . /gpfs/bbp.cscs.ch/ssd/apps/tools/jupyter/venvs/python39/bin/activate

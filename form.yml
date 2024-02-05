@@ -47,7 +47,8 @@ attributes:
       - [ "python 3.9 environment", "python39" ]
       - [ "python 3.10 environment", "python310" ]
       - [ "BBS-BBG environment", "bbs_bbg" ]
-      - [ "Nexus Forge environment", "nexus_forge" ]
+      - [ "Nexus Forge environment", "nexus_forge_38" ]
+      - [ "Nexus Forge environment 3.7", "nexus_forge" ]  
     help: "Select 'Default python 3.7' if you are not sure"
   bbp_partition:
     widget: select
